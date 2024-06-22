@@ -1,8 +1,8 @@
-# Enhanced Math Plugin for Obsidian
+# Mathsidian for Obsidian
 
 ## Overview
 
-The Enhanced Math Plugin is a powerful tool for Obsidian that brings advanced mathematical capabilities to your notes. With this plugin, you can perform calculations, solve linear equations, create graphs, and more, all within your Obsidian environment.
+Love the new Apple Math Notes? Mathsidian is a plugin that brings advanced mathematical capabilities to your Obsidian notes. Perform calculations, solve linear equations, create graphs, and more, all within your Obsidian environment.
 
 ## Features
 
@@ -75,4 +75,4 @@ The plugin adds a calculator icon to the left sidebar ribbon. Click this to view
 
 If you encounter any issues or have suggestions for improvements, please visit the plugin's GitHub repository to submit an issue or contribute to the project.
 
-Thank you for using the Enhanced Math Plugin!
+Thank you for using Mathsidian!

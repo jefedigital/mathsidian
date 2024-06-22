@@ -3,9 +3,8 @@
   "name": "Mathsidian",
   "version": "1.0.1",
   "minAppVersion": "0.15.0",
-  "description": "Perform calculations, solve equations, and create graphs in your Obsidian notes.",
+  "description": "Apple Math Notes functionality - perform calculations in-line, solve equations, and create graphs in your notes.",
   "author": "Jeff Parks",
-  "authorUrl": "https://github.com/jefedigital/Mathsidian",
   "isDesktopOnly": false
 }
 

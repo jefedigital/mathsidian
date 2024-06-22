@@ -28,6 +28,7 @@ x + y
 solve(2x - 7 = 3)
 ```
 ```
+```
 
 
 ### Graphing

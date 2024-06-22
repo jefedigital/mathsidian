@@ -27,9 +27,6 @@ y = 10
 x + y
 solve(2x - 7 = 3)
 ```
-```
-```
-
 
 ### Graphing
 
@@ -40,7 +37,6 @@ Create graphs using the graph block:
 f(x) = x^2
 xRange: [-5, 5]
 yRange: [0, 25]
-```
 ```
 
 

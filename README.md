@@ -76,6 +76,6 @@ The plugin adds a calculator icon to the left sidebar ribbon. Click this to view
 
 ## Feedback and Support
 
-If you encounter any issues or have suggestions for improvements, please visit the plugin's GitHub repository to submit an issue or contribute to the project.
+If you encounter any issues or have suggestions for improvements, please visit the plugin's [GitHub repository])https://github.com/jefedigital/mathsidian) to submit an issue or contribute to the project.
 
 Thank you for using Mathsidian!

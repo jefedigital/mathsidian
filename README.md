@@ -32,11 +32,11 @@ solve(2x - 7 = 3)
 Create graphs using the graph block:
 
 ```graph
-\```graph
+\`\`\`graph
 f(x) = x^2
 xRange: [-5, 5]
 yRange: [0, 25]
-\```
+\`\`\`
 ```
 
 ### Inline Calculations

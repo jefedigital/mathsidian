@@ -3,7 +3,7 @@
   "name": "Mathsidian",
   "version": "1.0.1",
   "minAppVersion": "0.15.0",
-  "description": "Apple Math Notes functionality - perform calculations in-line, solve equations, and create graphs in your notes.",
+  "description": "Apple Math Notes functionality - perform calculations in-line, create variable, solve equations, and create graphs in your notes.",
   "author": "Jeff Parks",
   "isDesktopOnly": false
 }

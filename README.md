@@ -20,10 +20,13 @@ Love the new Apple Math Notes? Mathsidian is a plugin that brings advanced mathe
 Use math blocks for multi-line calculations, variables and equation solving:
 
 ```math
-2 + 2 \\
-x = 5 \\
-y = 10 \\
-x + y \\
+```
+```
+```
+2 + 2
+x = 5
+y = 10
+x + y
 solve(2x - 7 = 3)
 ```
 

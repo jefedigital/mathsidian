@@ -19,28 +19,29 @@ Love the new Apple Math Notes? Mathsidian is a plugin that brings advanced mathe
 
 Use math blocks for multi-line calculations, variables and equation solving:
 
+```
 ```math
-```
-```
-```
 2 + 2
 x = 5
 y = 10
 x + y
 solve(2x - 7 = 3)
 ```
+```
+
 
 ### Graphing
 
 Create graphs using the graph block:
 
+```
 ```graph
-\`\`\`graph
 f(x) = x^2
 xRange: [-5, 5]
 yRange: [0, 25]
-\`\`\`
 ```
+```
+
 
 ### Inline Calculations
 

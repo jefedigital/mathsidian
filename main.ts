@@ -2,13 +2,13 @@ import { Plugin, MarkdownPostProcessorContext, MarkdownView, Modal, App, Notice 
 import * as math from 'mathjs';
 import functionPlot from 'function-plot';
 
-export default class EnhancedMathPlugin extends Plugin {
+export default class Mathdisian extends Plugin {
   private variables: { [key: string]: any } = {};
   private history: string[] = [];
   private mathInstance: math.MathJsStatic;
 
   async onload() {
-    console.log('Loading Enhanced Math Plugin');
+    console.log('Loading Mathdisian');
 
     this.mathInstance = math.create(math.all);
 
@@ -23,7 +23,7 @@ export default class EnhancedMathPlugin extends Plugin {
     this.registerMarkdownCodeBlockProcessor("graph", this.graphProcessor.bind(this));
     this.registerMarkdownPostProcessor(this.inlineProcessor.bind(this));
 
-    this.addRibbonIcon('calculator', 'Math Plugin', (evt: MouseEvent) => {
+    this.addRibbonIcon('calculator', 'Mathdisian', (evt: MouseEvent) => {
       this.showHistory();
     });
 
@@ -91,7 +91,7 @@ export default class EnhancedMathPlugin extends Plugin {
   }
 
   onunload() {
-    console.log('Unloading Enhanced Math Plugin');
+    console.log('Unloading Mathdisian');
   }
 
   mathProcessor(source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext) {
@@ -122,13 +122,13 @@ export default class EnhancedMathPlugin extends Plugin {
           }
           const resultSpan = document.createElement('span');
           resultSpan.textContent = ` ${this.formatResult(result)}`;
-          resultSpan.style.color = 'green';
+          resultSpan.classList.add('math-inline-result');
           lineElement.appendChild(resultSpan);
           this.history.push(`${expr} = ${this.formatResult(result)}`);
         } catch (error) {
           const errorSpan = document.createElement('span');
           errorSpan.textContent = ` Error: ${error instanceof Error ? error.message : 'Unknown error'}`;
-          errorSpan.style.color = 'red';
+          errorSpan.classList.add('math-inline-error');
           lineElement.appendChild(errorSpan);
         }
       }
@@ -144,8 +144,6 @@ export default class EnhancedMathPlugin extends Plugin {
     
     const graphElement = document.createElement('div');
     graphElement.classList.add('math-graph');
-    graphElement.style.width = '100%';
-    graphElement.style.height = '400px';
 
     try {
       const funcLine = graphData.find(line => line.startsWith('f(x)'));
@@ -163,7 +161,7 @@ export default class EnhancedMathPlugin extends Plugin {
       functionPlot({
         target: graphElement,
         width: graphElement.clientWidth,
-        height: graphElement.clientHeight,
+        height: 400,
         yAxis: { domain: yRange },
         xAxis: { domain: xRange },
         data: [{
@@ -174,7 +172,7 @@ export default class EnhancedMathPlugin extends Plugin {
 
     } catch (error) {
       graphElement.textContent = `Error creating graph: ${error instanceof Error ? error.message : 'Unknown error'}`;
-      graphElement.style.color = 'red';
+      graphElement.classList.add('math-inline-error');
     }
 
     el.appendChild(graphElement);
@@ -199,13 +197,13 @@ export default class EnhancedMathPlugin extends Plugin {
           try {
             const result = this.mathInstance.evaluate(expression, this.variables);
             const resultNode = document.createElement('span');
-            resultNode.addClass('math-inline-result');
+            resultNode.classList.add('math-inline-result');
             resultNode.textContent = `${expression} = ${this.formatResult(result)}`;
             fragments.push(resultNode);
             this.history.push(`${expression} = ${this.formatResult(result)}`);
           } catch (error) {
             const errorNode = document.createElement('span');
-            errorNode.addClass('math-inline-error');
+            errorNode.classList.add('math-inline-error');
             errorNode.textContent = `Error in "${expression}": ${error instanceof Error ? error.message : 'Unknown error'}`;
             fragments.push(errorNode);
           }
@@ -346,6 +344,7 @@ class HistoryModal extends Modal {
   onOpen() {
     const { contentEl } = this;
     contentEl.empty();
+    contentEl.addClass('math-history-modal');
     contentEl.createEl('h2', { text: 'Calculation History' });
     const historyList = contentEl.createEl('ul');
     this.history.slice().reverse().forEach(item => {

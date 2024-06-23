@@ -5,6 +5,6 @@
   "minAppVersion": "0.15.0",
   "description": "Apple Math Notes functionality - perform calculations in-line, create variable, solve equations, and create graphs in your notes.",
   "author": "Jeff Parks",
-  "isDesktopOnly": false
+  "isDesktopOnly": false,
+  "styles": ["styles.css"]
 }
-

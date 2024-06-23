@@ -1,5 +1,9 @@
 # Mathsidian for Obsidian
 
+## Feedback & Support: 
+
+Join our [Discord](https://discord.gg/U5YCfbB2sf)
+
 ## Overview
 
 Love the new Apple Math Notes? Mathsidian is a plugin that brings advanced mathematical capabilities to your Obsidian notes. Perform calculations, solve linear equations, create graphs, and more, all within your Obsidian environment.
@@ -74,8 +78,8 @@ The plugin adds a calculator icon to the left sidebar ribbon. Click this to view
 - The equation solver currently handles only linear equations.
 - Graphs are limited to 2D representations.
 
-## Feedback and Support
+## Feedback & Support: 
 
-If you encounter any issues or have suggestions for improvements, please visit the plugin's [GitHub repository](https://github.com/jefedigital/mathsidian) to submit an issue or contribute to the project.
+Join our [Discord](https://discord.gg/U5YCfbB2sf)
 
 Thank you for using Mathsidian!
